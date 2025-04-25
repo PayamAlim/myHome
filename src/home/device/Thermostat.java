@@ -14,8 +14,8 @@ public class Thermostat extends Device{
         this.temperature = temperature;
     }
 
-    public Thermostat(String name) {
-        super(name);
+    public Thermostat(String name, String protocol) {
+        super(name, protocol);
         temperature = 20;
     }
 }
