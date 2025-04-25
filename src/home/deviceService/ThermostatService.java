@@ -5,19 +5,19 @@ import home.device.Light;
 import home.device.Thermostat;
 
 public class ThermostatService {
-    public void addThermostat(String name, String protocol) {
+    public static void addThermostat(String name, String protocol) {
         Thermostat thermostat = new Thermostat(name, protocol);
 
         Device.allDevices.add(thermostat);
     }
 
-    public void setTemperature(String name, int temperature) {
+    public static void setTemperature(String name, int temperature) {
         Thermostat thermostat = toThermostat(name);
 
         thermostat.setTemperature(temperature);
     }
 
-    public Thermostat toThermostat(String name) {
+    public static Thermostat toThermostat(String name) {
         for (Device device: Device.allDevices)
             if (device.getName().equalsIgnoreCase(name))
                 if (!(device instanceof Thermostat))

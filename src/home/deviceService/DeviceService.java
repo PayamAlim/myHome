@@ -6,12 +6,11 @@ import home.device.Thermostat;
 import java.util.ArrayList;
 
 public class DeviceService {
-    static void removeDevice(String name) {
+    public static void removeDevice(String name) {
         for (Device device: Device.allDevices)
             if(device.getName().equalsIgnoreCase(name))
                 Device.allDevices.remove(device);
     }
-
 
     public static void turnOn(String name) {
         Device device = toDevice(name);
@@ -25,7 +24,7 @@ public class DeviceService {
         device.setStatus(Device.Status.Off);
     }
 
-    static ArrayList<Device> getAllDevices() {
+    public static ArrayList<Device> getAllDevices() {
         return Device.allDevices;
     }
 
