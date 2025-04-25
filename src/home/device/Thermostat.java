@@ -9,7 +9,7 @@ public class Thermostat extends Device{
 
     public void setTemperature(int temperature) {
         if (temperature > 30 || temperature < 10)
-            throw new IllegalArgumentException("Invalid temperature");
+            throw new IllegalArgumentException("Invalid value");
 
         this.temperature = temperature;
     }
@@ -17,5 +17,11 @@ public class Thermostat extends Device{
     public Thermostat(String name, String protocol) {
         super(name, protocol);
         temperature = 20;
+        fillProperties();
+    }
+
+    private void fillProperties() {
+        properties.add("status");
+        properties.add("temperature");
     }
 }

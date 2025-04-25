@@ -1,7 +1,6 @@
 package home.deviceService;
 
 import home.device.Device;
-import home.device.Thermostat;
 
 import java.util.ArrayList;
 
@@ -24,11 +23,7 @@ public class DeviceService {
         device.setStatus(Device.Status.Off);
     }
 
-    public static ArrayList<Device> getAllDevices() {
-        return Device.allDevices;
-    }
-
-    private static Device toDevice(String deviceName) {
+    public static Device toDevice(String deviceName) {
         for (Device device: Device.allDevices)
             if(device.getName().equalsIgnoreCase(deviceName))
                 return device;

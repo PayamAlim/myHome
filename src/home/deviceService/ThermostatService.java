@@ -1,7 +1,6 @@
 package home.deviceService;
 
 import home.device.Device;
-import home.device.Light;
 import home.device.Thermostat;
 
 public class ThermostatService {

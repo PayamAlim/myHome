@@ -18,10 +18,6 @@ public class RuleService {
                 doRule(rule, rule.getAction());
     }
 
-    public static ArrayList<Rule> getAllRules() {
-        return Rule.allRules;
-    }
-
     private static void doRule(Rule rule, boolean action) {
         if (action)
             DeviceService.turnOn(rule.getDeviceRef().getName());

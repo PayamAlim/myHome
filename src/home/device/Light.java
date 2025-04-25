@@ -9,7 +9,7 @@ public class Light extends Device{
 
     public void setBrightness(int brightness) {
         if (brightness > 100 || brightness < 0)
-            throw new IllegalArgumentException("Invalid brightness");
+            throw new IllegalArgumentException("Invalid value");
 
         this.brightness = brightness;
     }
@@ -17,5 +17,12 @@ public class Light extends Device{
     public Light(String name, String protocol) {
         super(name, protocol);
         brightness = 50;
+        fillProperties();
+    }
+
+
+    private void fillProperties() {
+        properties.add("status");
+        properties.add("brightness");
     }
 }

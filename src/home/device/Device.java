@@ -2,11 +2,15 @@ package home.device;
 
 import java.util.ArrayList;
 
-public abstract class Device {
+public class Device {
     public static ArrayList<Device> allDevices = new ArrayList<>();
     public static ArrayList<String> allProtocols = new ArrayList<>();
 
-    protected String name, protocol;
+    public ArrayList<String> properties = new ArrayList<>();
+
+    protected String name;
+
+    protected String protocol;
 
     public enum Status {
         On,
@@ -27,6 +31,9 @@ public abstract class Device {
         return name;
     }
 
+    public String getProtocol() {
+        return protocol;
+    }
 
     public Device(String name, String protocol) {
         status = Status.Off;
