@@ -10,18 +10,6 @@ public class LightService {
         Device.allDevices.add(light);
     }
 
-    public void turnOn(String name) {
-        Light light = toLight(name);
-
-        light.setStatus(Device.Status.On);
-    }
-
-    public void turnOff(String name) {
-        Light light = toLight(name);
-
-        light.setStatus(Device.Status.Off);
-    }
-
     public void setBrightness(String name, int brightness) {
         Light light = toLight(name);
 

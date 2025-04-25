@@ -11,18 +11,6 @@ public class ThermostatService {
         Device.allDevices.add(thermostat);
     }
 
-    public void turnOn(String name) {
-        Thermostat thermostat = toThermostat(name);
-
-        thermostat.setStatus(Device.Status.On);
-    }
-
-    public void turnOff(String name) {
-        Thermostat thermostat = toThermostat(name);
-
-        thermostat.setStatus(Device.Status.Off);
-    }
-
     public void setTemperature(String name, int temperature) {
         Thermostat thermostat = toThermostat(name);
 
