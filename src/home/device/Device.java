@@ -8,11 +8,25 @@ public abstract class Device {
 
     protected String name, protocol;
 
-    protected enum Status {
+    public enum Status {
         On,
         Off;
     }
+
     protected Status status;
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public String getName() {
+        return name;
+    }
+
 
     public Device(String name, String protocol) {
         status = Status.Off;
